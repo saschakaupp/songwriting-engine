@@ -72,7 +72,7 @@ These are illustrative fictional examples. Use your own material, and avoid incl
 
 ## Generate a song
 
-```
+```mermaid
 flowchart TD
     A["🎵 Codex Command<br/>$quote-to-song friendship, english, lyrix-version"]
     B["📚 Load Quote Collections<br/>from input/"]

@@ -72,6 +72,45 @@ These are illustrative fictional examples. Use your own material, and avoid incl
 
 ## Generate a song
 
+```
+flowchart TD
+    A["🎵 Codex Command<br/>$quote-to-song friendship, english, lyrix-version"]
+    B["📚 Load Quote Collections<br/>from input/"]
+    C["🔎 Analyze Quotes<br/>Themes, motifs, and mood"]
+    D["🎼 Develop Song Concept<br/>Genre, structure, and language"]
+    E["✍️ Generate Original Lyrics"]
+    F["🎛️ Generate Original Style Prompt"]
+    G{"Lyrix Version<br/>Requested?"}
+    H["🎙️ Generate Lyrix Lyrics<br/>Original vocals + spoken<br/>German radio translations"]
+    I["🎛️ Generate Lyrix Style Prompt"]
+    J["📏 Validate Character Limits<br/>and Completeness"]
+    K["📄 Save Single Markdown File<br/>to dist/"]
+    L["🎧 Transfer Lyrics and<br/>Style Prompts to Suno"]
+    M["🎶 Original Song"]
+    N["🎶 Lyrix Version"]
+
+    A --> B --> C --> D
+    D --> E
+    D --> F
+    E --> G
+    F --> G
+    G -->|Yes| H --> I --> J
+    G -->|No| J
+    J --> K --> L
+    L --> M
+    L -->|If generated| N
+
+    classDef input fill:#e0e7ff,stroke:#6366f1,color:#312e81
+    classDef process fill:#e0f2fe,stroke:#0284c7,color:#075985
+    classDef lyrix fill:#f3e8ff,stroke:#9333ea,color:#6b21a8
+    classDef output fill:#dcfce7,stroke:#16a34a,color:#166534
+
+    class A,B input
+    class C,D,E,F,G,J process
+    class H,I lyrix
+    class K,L,M,N output
+```
+
 Open the project directory in Codex and enter:
 
 ```text
